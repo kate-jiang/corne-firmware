@@ -40,13 +40,13 @@
     combos {
         compatible = "zmk,combos";
 
-        hyperm {
-            bindings = <&kp LC(LA(LS(LG(M))))>;
+        click {
+            bindings = <&kp LC(LS(LG(M)))>;
             key-positions = <32 31 33>;
         };
 
-        hypere {
-            bindings = <&kp LS(LA(LC(LG(E))))>;
+        scroll {
+            bindings = <&kp LS(LA(LC(LG(M))))>;
             key-positions = <27 28 26>;
         };
     };
