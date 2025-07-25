@@ -23,17 +23,17 @@
             require-prior-idle-ms = <100>;
         };
 
-        HML: HML {
+        esc: esc {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
+            label = "ESC";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "balanced";
             hold-trigger-on-release;
-            require-prior-idle-ms = <100>;
-            hold-trigger-key-positions = <30 18 6 7 19 31 32 20 8 10 9 21 33 35 22 34 23 11>;
+            require-prior-idle-ms = <50>;
+            hold-trigger-key-positions = <30 18 6 7 19 31 32 20 8 10 9 21 33 35 22 34 23 11 1 13 25 26 14 2 3 15 27 28 16 4 5 17 29 39>;
         };
     };
 
@@ -58,8 +58,8 @@
             display-name = "base";
             bindings = <
 &kp TAB            &kp Q  &kp W  &kp F     &kp P  &kp B        &kp J      &kp L  &kp U          &kp Y    &kp SEMI  &kp BACKSPACE
-&HML LCTRL ESCAPE  &kp A  &kp R  &kp S     &kp T  &kp G        &kp M      &kp N  &kp E          &kp I    &kp O     &kp RET
-&kp LGUI           &kp Z  &kp X  &kp C     &kp D  &kp V        &kp K      &kp H  &kp COMMA      &kp DOT  &kp FSLH  &kp LA(LS(LC(Q)))
+&esc LCTRL ESCAPE  &kp A  &kp R  &kp S     &kp T  &kp G        &kp M      &kp N  &kp E          &kp I    &kp O     &kp RET
+&kp LGUI           &kp Z  &kp X  &kp C     &kp D  &kp V        &kp K      &kp H  &kp COMMA      &kp DOT  &kp FSLH  &kp COLON
                                  &kp LGUI  &mo 1  &kp LSHFT    &kp SPACE  &mo 2  &kp RIGHT_ALT
             >;
         };
@@ -67,10 +67,10 @@
         ctrl {
             display-name = "ctrl";
             bindings = <
-&trans  &kp C_BRI_DN  &mkp MB2        &mmv MOVE_UP    &mkp MB1         &kp C_BRI_UP    &none      &kp N7  &kp N8  &kp N9  &none          &trans
-&trans  &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans          &kp COLON  &kp N4  &kp N5  &kp N6  &kp SEMICOLON  &trans
-&trans  &trans        &kp C_VOL_DN    &kp C_MUTE      &kp C_VOL_UP     &kp C_PP        &none      &kp N1  &kp N2  &kp N3  &kp SLASH      &trans
-                                      &trans          &trans           &trans          &mkp MB1   &kp N0  &trans
+&trans  &kp C_BRI_DN  &mkp MB2        &mmv MOVE_UP    &mkp MB1         &kp C_BRI_UP    &trans    &kp N7  &kp N8  &kp N9  &none          &trans
+&trans  &kp C_PP      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans          &trans    &kp N4  &kp N5  &kp N6  &kp SEMICOLON  &trans
+&trans  &trans        &kp C_VOL_DN    &kp C_MUTE      &kp C_VOL_UP     &trans          &trans    &kp N1  &kp N2  &kp N3  &trans         &trans
+                                      &trans          &trans           &trans          &mkp MB1  &kp N0  &trans
             >;
         };
 
@@ -78,7 +78,7 @@
             display-name = "sym";
             bindings = <
 &trans  &kp GRAVE  &kp TILDE  &kp DQT   &kp SQT    &kp PRCNT    &kp CARET  &kp LPAR  &kp RPAR  &kp DLLR  &kp PIPE  &trans
-&trans  &kp MINUS  &kp UNDER  &kp PLUS  &kp EXCL   &kp EQUAL    &kp COLON  &kp LBRC  &kp RBRC  &kp STAR  &kp SEMI  &trans
+&trans  &kp MINUS  &kp UNDER  &kp PLUS  &kp EXCL   &kp EQUAL    &trans     &kp LBRC  &kp RBRC  &kp STAR  &kp SEMI  &trans
 &trans  &kp HASH   &kp LT     &kp GT    &kp QMARK  &kp AMPS     &kp AT     &kp LBKT  &kp RBKT  &kp BSLH  &kp FSLH  &trans
                               &trans    &trans     &trans       &trans     &trans    &trans
             >;
