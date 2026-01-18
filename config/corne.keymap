@@ -55,7 +55,6 @@
         compatible = "zmk,keymap";
 
         base {
-            display-name = "base";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp F     &kp P  &kp B        &kp J      &kp L  &kp U         &kp Y    &kp SEMI  &kp BACKSPACE
 &kp LCTRL  &kp A  &kp R  &kp S     &kp T  &kp G        &kp M      &kp N  &kp E         &kp I    &kp O     &kp RET
@@ -65,7 +64,6 @@
         };
 
         ctrl {
-            display-name = "ctrl";
             bindings = <
 &soft_off  &kp C_BRI_DN  &mkp MB2        &mmv MOVE_UP    &mkp MB1         &kp C_BRI_UP    &trans    &kp N7  &kp N8  &kp N9  &trans  &trans
 &trans     &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans          &trans    &kp N4  &kp N5  &kp N6  &trans  &trans
@@ -75,7 +73,6 @@
         };
 
         sym {
-            display-name = "sym";
             bindings = <
 &trans  &kp GRAVE  &kp TILDE  &kp DQT   &kp SQT       &kp PRCNT    &kp CARET  &kp LPAR  &kp RPAR  &kp DLLR  &trans  &trans
 &trans  &kp MINUS  &kp UNDER  &kp PLUS  &kp EXCL      &kp EQUAL    &kp PIPE   &kp LBRC  &kp RBRC  &kp STAR  &trans  &trans
