@@ -50,6 +50,12 @@
             bindings = <&kp LS(LA(LC(LG(M))))>;
             key-positions = <27 28 26>;
         };
+
+        bt_clear {
+            bindings = <&bt BT_CLR>;
+            key-positions = <10 11>;
+            layers = <1>;
+        };
     };
 
     keymap {
@@ -68,7 +74,7 @@
         ctrl {
             display-name = "ctrl";
             bindings = <
-&none   &kp C_BRI_DN  &mkp MB2        &mmv MOVE_UP    &mkp MB1         &kp C_BRI_UP    &bt BT_CLR  &kp N7  &kp N8  &kp N9  &bt BT_PRV    &bt BT_NXT
+&none   &kp C_BRI_DN  &mkp MB2        &mmv MOVE_UP    &mkp MB1         &kp C_BRI_UP    &trans      &kp N7  &kp N8  &kp N9  &bt BT_PRV    &bt BT_NXT
 &trans  &trans        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans          &trans      &kp N4  &kp N5  &kp N6  &bt BT_SEL 0  &bt BT_SEL 1
 &trans  &trans        &kp C_VOL_DN    &kp C_MUTE      &kp C_VOL_UP     &trans          &trans      &kp N1  &kp N2  &kp N3  &bt BT_SEL 2  &trans
                                       &trans          &trans           &trans          &mkp MB1    &kp N0  &trans
