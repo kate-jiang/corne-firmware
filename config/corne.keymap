@@ -60,11 +60,13 @@
         bt_nxt {
             bindings = <&bt BT_NXT>;
             key-positions = <11 10>;
+            layers = <1>;
         };
 
         bt_prv {
             bindings = <&bt BT_PRV>;
             key-positions = <23 22>;
+            layers = <1>;
         };
     };
 
